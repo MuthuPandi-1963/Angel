@@ -33,9 +33,29 @@ import Dummy from "./useState/Dummy";
 // }
 // export default App;
 
-
+import axios from 'axios'
 
 export default function App() {
+
+  console.log("hello world 1");
+  setTimeout(()=>{
+    console.log("hello world 2");
+  },5000)
+  
+  
+
+  async function FetchData() {
+    try{
+      const response = await axios.get("https://dummyjson.com/users")
+      // console.log(response.data.users[0].firstName);
+      console.log(response.data.users);
+    }catch(err){
+      console.log("URL is Wrong",err.message);
+    }
+     
+  }
+  FetchData()
+  console.log("hello world 3");
   return(
     <>
     <Dummy/>
