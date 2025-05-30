@@ -9,6 +9,7 @@
 // function App(){
 
 import { useEffect, useState } from "react";
+import pic from './assets/doc.png'
 import Counter from "./useState/Counter";
 import Dummy from "./useState/Dummy";
 
@@ -76,6 +77,7 @@ export default function App() {
     <>
     {/* <Dummy/>
     <Counter/> */}
+    <img src={pic} alt="" width={"400px"} />
 
     {data.map((val,id)=>(
       <div className="" key={id}>
